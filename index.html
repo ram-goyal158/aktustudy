@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AKTU Study: Notes, PYQs, Quantum, Syllabus, Updates, and Quick Study Book for AKTU students." />
+  <meta name="keywords" content="AKTU, AKTU Study, Quick Study Book, Notes, PYQ, Quantum, AKTU Updates, Syllabus, ERP, Result" />
+  <meta name="author" content="Ram Goyal" />
+  <title>AKTU Study | All-in-One Study Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fdfdfd;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #0D4C92;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* ✅ Fix here */
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* ✅ Link style */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  color: #ECB365;
+}
+
+/* ✅ Responsive nav on small screens */
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+}
+
+    .banner-container {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      border-radius: 20px;
+      margin: 1.5rem;
+    }
+    .banner-slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0; left: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      background: linear-gradient(135deg, #064663, #0D4C92);
+      padding: 2rem;
+      text-align: center;
+      transition: left 1s ease-in-out;
+      border-radius: 20px;
+    }
+    .banner-slide.active {left: 0;}
+    .banner-slide h2 {font-size: 2rem; margin-bottom: 1rem; animation: fadeIn 1s ease-in-out;}
+    .banner-slide p {font-size: 1.2rem; animation: fadeIn 1.5s ease-in-out;}
+
+    .search-bar {margin: 2rem auto; text-align: center; padding: 0 1rem;}
+    .search-bar input {
+      padding: 0.8rem 1.2rem;
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid #0D4C92;
+      border-radius: 30px;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s ease;
+    }
+    .search-bar input:focus {box-shadow: 0 0 10px #0D4C92;}
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+      animation: fadeIn 2s ease;
+    }
+    .card {
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: #fff;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .card h3 {margin-bottom: 0.5rem; color: #064663;}
+    .card p {font-size: 0.9rem; color: #444;}
+
+    .official-links {
+      padding: 2rem 1rem;
+      background: #f0f8ff;
+    }
+    .official-links h2 {
+      text-align: center;
+      color: #0D4C92;
+      margin-bottom: 1rem;
+    }
+    .official-links .cards {
+      padding: 0;
+    }
+
+    footer {
+      background: #0D4C92;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: #ECB365;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #ECB365;
+    }
+
+    .banner-slide-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .banner-slide-link:hover {
+      text-decoration: none;
+    }
+
+    .banner-slide h2,
+    .banner-slide p {
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .banner-slide:hover h2 {
+      color: whitesmoke;
+    }
+
+    .banner-slide:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    .about-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #e6f0ff;
+      border-radius: 25px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #0a58ca;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .faq-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #e6f0ff;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      color: #0a58ca;
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+
+    details {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    details:hover {
+      background-color: #f9fbff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    summary {
+      font-weight: bold;
+      font-size: 18px;
+      color: #0d47a1;
+      list-style: none;
+    }
+
+    details[open] summary::after {
+      content: "▲";
+      float: right;
+      font-size: 14px;
+      color: #0d47a1;
+    }
+
+    summary::after {
+      content: "▼";
+      float: right;
+      font-size: 14px;
+      color: #0d47a1;
+    }
+
+    details p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      header {padding: 1rem;}
+      header h1 {font-size: 1.3rem;}
+      
+      .banner-container {
+        height: 250px;
+        margin: 1rem;
+        border-radius: 15px;
+      }
+      .banner-slide {
+        padding: 1.5rem;
+        border-radius: 15px;
+      }
+      .banner-slide h2 {font-size: 1.5rem;}
+      .banner-slide p {font-size: 1rem;}
+      
+      .cards {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+      
+      .about-section, .faq-section {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+      .about-section h2, .faq-section h2 {
+        font-size: 28px;
+      }
+      .about-section p, details p {
+        font-size: 16px;
+      }
+      summary {
+        font-size: 17px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      header {flex-direction: column; text-align: center;}
+      header h1 {margin-bottom: 0.5rem;}
+      nav {justify-content: space-around;}
+      nav a {margin: 0.3rem; font-size: 0.9rem;}
+      
+      .banner-container {
+        height: 200px;
+      }
+      .banner-slide h2 {font-size: 1.3rem;}
+      .banner-slide p {font-size: 0.9rem;}
+      
+      .about-section, .faq-section {
+        padding: 15px;
+      }
+      .about-section h2, .faq-section h2 {
+        font-size: 24px;
+      }
+      .about-section p {
+        font-size: 15px;
+        text-align: left;
+      }
+      
+      footer a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      
+      details {
+        padding: 10px 15px;
+      }
+      summary {
+        font-size: 16px;
+      }
+      details p {
+        font-size: 14px;
+      }
+    }
+</style>
+</head>
+<body>
+  <header>
+    <h1>🎓AKTU Study</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="courses/courses.html">Notes</a>
+      <a href="courses/courses.html">Quantum</a>
+      <a href="https://aktu.ac.in/syllabus.html">Syllabus</a>
+      <a href="blog/blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <section class="banner-container">
+    <a href="courses/courses.html" class="banner-slide-link">
+  <div class="banner-slide active">
+    <h2>📖 Quick Study Book</h2>
+    <p>Your exclusive AKTU book for smart learning</p>
+  </div>
+</a>
+
+<a href="courses/courses.html" class="banner-slide-link">
+    <div class="banner-slide">
+      <h2>📚 Courses</h2>
+      <p>Branch-wise curated semester content</p>
+    </div>
+    </a>
+    <a href="update/update.html" class="banner-slide-link">
+    <div class="banner-slide">
+      <h2>📰 AKTU Updates</h2>
+      <p>Latest official university circulars</p>
+    </div>
+    </a>
+
+    <a href="courses/courses.html" class="banner-slide-link">
+    <div class="banner-slide">
+      <h2>📜 PYQs</h2>
+      <p>Sorted previous year question papers</p>
+    </div></a>
+
+    <a href="courses/courses.html" class="banner-slide-link">
+    <div class="banner-slide">
+      <h2>🎥 Video Lectures</h2>
+      <p>Visual concept clarity from top educators</p>
+    </div></a>
+
+    <a href="courses/courses.html" class="banner-slide-link">
+    <div class="banner-slide">
+      <h2>📝 Notes</h2>
+      <p>Downloadable notes by semester</p>
+    </div></a>
+
+    <a href="courses/courses.html" class="banner-slide-link">
+    <div class="banner-slide">
+      <h2>📘 Quantum Books</h2>
+      <p>Quantum series collection for all branches</p>
+    </div></a>
+    
+  </section>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search Notes, Books, PYQs..." onkeyup="searchFunction()" />
+  </div>
+
+  <section class="cards" id="cardSection">
+    <a href="courses/courses.html" style="text-decoration: none; color: inherit;"><div class="card" id="mybook">
+      <h3>📖 Quick Study Book</h3>
+      <p>Your exclusive AKTU companion book designed for fast, effective study.</p>
+    </div></a>
+    <a href="courses/courses.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <h3>📚 Courses</h3>
+    <p>Branch-wise curated semester content to help you master your course.</p>
+  </div>
+</a>
+    <a href="update/update.html" style="text-decoration: none; color: inherit;">
+    <div class="card" id="updates">
+      <h3>📰 AKTU Updates</h3>
+      <p>Stay updated with official notices, exam dates & academic news.</p>
+    </div></a>
+    <a href="courses/courses.html" style="text-decoration: none; color: inherit;">
+    <div class="card" id="pyq">
+      <h3>📜 PYQs</h3>
+      <p>Previous year question papers sorted by subject and year.</p>
+    </div>
+    </a>
+    <a href="courses/courses.html" style="text-decoration: none; color: inherit;"><div class="card">
+      <h3>🎥 Video Lectures</h3>
+      <p>Top faculty lectures to help you understand concepts visually.</p>
+    </div></a>
+    <a href="courses/courses.html" style="text-decoration: none; color: inherit;"><div class="card" id="notes">
+      <h3>📝 Notes</h3>
+      <p>Download clean, branch-wise notes for all subjects and semesters.</p>
+    </div></a>
+    <a href="courses/courses.html" style="text-decoration: none; color: inherit;"><div class="card" id="quantum">
+      <h3>📘 Quantum Books</h3>
+      <p>One-stop collection of Quantum Series books for your preparation.</p>
+    </div></a>
+    <div class="card">
+      <h3>📊 AKTU Result</h3>
+      <p>Check your AKTU semester exam results directly from official sources.</p>
+    </div>
+    <a href="courses/courses.html" style="text-decoration: none; color: inherit;"><div class="card">
+      <h3>📄 AKTU Syllabus</h3>
+      <p>Official syllabus for all branches and semesters at one place.</p>
+    </div></a>
+  </section>
+
+  <section class="official-links">
+    <h2>🔗 Official AKTU Links</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>AKTU Website</h3>
+        <p><a href="https://aktu.ac.in/" target="_blank">Visit official homepage</a></p>
+      </div>
+      <div class="card">
+        <h3>Exam Notices</h3>
+        <p><a href="https://erp.aktu.ac.in/" target="_blank">Check latest exam circulars</a></p>
+      </div>
+      <div class="card">
+        <h3>ERP Login</h3>
+        <p><a href="https://erp.aktu.ac.in/" target="_blank">Access AKTU ERP portal</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Academic Calendar</h3>
+        <p><a href="https://aktu.ac.in" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Syllabus</h3>
+        <p><a href="https://aktu.ac.in/syllabus.html" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>circular</h3>
+        <p><a href="https://aktu.ac.in/circulars.html" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Student Section</h3>
+        <p><a href="https://erp.aktu.ac.in/" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Faculty Section</h3>
+        <p><a href="https://erp.aktu.ac.in/" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Affilated Colleges List</h3>
+        <p><a href="https://aktu.ac.in/affiliated-institutions.html" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Result</h3>
+        <p><a href="https://erp.aktu.ac.in/WebPages/OneView/OneView.aspx" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Anti-Ragging Information</h3>
+        <p><a href="https://aktu.ac.in/anti-ragging.html" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Grievance Redressal</h3>
+        <p><a href="https://erp.aktu.ac.in/WebPages/StudentServices/frmStudentGrievanceForm.aspx" target="_blank">Visit official homepage</a></p>
+      </div>
+
+      <div class="card">
+        <h3>AKTU Contact Information</h3>
+        <p><a href="https://aktu.ac.in/contact-us.html" target="_blank">Visit official homepage</a></p>
+      </div>
+    
+  </section>
+
+  <section class="about-section">
+    <h2> Aktu Study</h2>
+    <p>
+      Aktu Study is your trusted partner in success, dedicated to providing accurate,
+      reliable and updated academic content for students of Dr. A.P.J. Abdul Kalam Technical University (AKTU).
+      Whether you're preparing for sessionals, semester exams, or competitive tests,
+      we bring handpicked notes, previous year papers, MCQs, and much more – all in one place.
+    </p>
+    <p>
+      Our mission is to simplify your learning journey with organized resources,
+      a clean user experience, and easy navigation — so you focus more on learning, and less on searching.
+    </p>
+  </section>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>📘 What is AKTU Study?</summary>
+      <p>AKTU Study is a platform that offers notes, PYQs, Quantum books, video lectures, and a custom book made especially for AKTU students.</p>
+    </details>
+
+    <details>
+      <summary>📚 Are the materials updated as per the latest syllabus?</summary>
+      <p>Yes, we regularly update our content based on the latest AKTU curriculum and official circulars.</p>
+    </details>
+
+    <details>
+      <summary>💬 How can I contact you for doubts or suggestions?</summary>
+      <p>You can reach us through the contact form on the website or via our social media links in the footer.</p>
+    </details>
+
+    <details>
+      <summary>📝 Is the Quick Study book free to download?</summary>
+      <p>Yes, Quick Study – our exclusive book – is available for free for all AKTU students directly on the homepage.</p>
+    </details>
+
+    <details>
+      <summary>🌐 Will more branches be added in the future?</summary>
+      <p>Absolutely! We are constantly expanding and will cover more branches and subjects in the coming weeks.</p>
+    </details>
+
+  </section>
+</div>
+
+  <footer>
+    <p>Copyright © 2025 AKTU Study | All Rights Reserved</p>
+    <div>
+      <a href="about.html">About Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="copyright.html">Copyright Policy</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/aktu_study/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/+918750760513" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/share/1HVUTPqx8H/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://t.me/AKTU_STUDY1" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+    
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.banner-slide');
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 3000);
+
+    function searchFunction() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        const title = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = title.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

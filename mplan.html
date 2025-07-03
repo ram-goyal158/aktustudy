@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore M.Plan (Master of Planning) specializations at AKTU Study: Urban Planning, Regional Planning, Transport Planning, Environmental Planning, Housing, Infrastructure Planning." />
+  <meta name="keywords" content="M.Plan, Master of Planning, Urban Planning, Regional Planning, Transport Planning, Environmental Planning, Housing, Infrastructure Planning" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your M.Plan Branch | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    article.branch-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #3a6ea5;
+    }
+    article.branch-card:hover,
+article.branch-card:focus-within {
+  background-color: #e0f0ff; /* Light blue */
+  box-shadow: 0 8px 28px rgba(10,35,66,0.3);
+  transform: translateY(-6px);
+}
+
+    article.branch-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: #0a2342;
+    }
+    article.branch-card p {
+      color: #234a78;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    article.branch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your M.Plan Branch</h1>
+</header>
+
+<main>
+  <div style="text-align:center; margin-bottom: 2rem;">
+  <input type="text" id="searchInput" placeholder="Search M.Plan Branch..." onkeyup="filterBranches()"
+    style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 20px; border: 1px solid #3a6ea5; font-size: 1rem;" />
+</div>
+
+  <section aria-label="M.Plan Branches" class="branch-grid">
+
+    <article class="branch-card">
+      <a href="branches/mplan/urban-planning.html" aria-label="Urban Planning branch">
+        <h2>Urban Planning</h2>
+        <p>Planning and development of urban areas for sustainable growth.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mplan/regional-planning.html" aria-label="Regional Planning branch">
+        <h2>Regional Planning</h2>
+        <p>Strategic planning for balanced development of regions.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mplan/transport-planning.html" aria-label="Transport Planning branch">
+        <h2>Transport Planning</h2>
+        <p>Design and management of efficient transportation systems.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mplan/environmental-planning.html" aria-label="Environmental Planning branch">
+        <h2>Environmental Planning</h2>
+        <p>Integrating environmental considerations in planning processes.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mplan/housing.html" aria-label="Housing branch">
+        <h2>Housing</h2>
+        <p>Planning and designing affordable and sustainable housing projects.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mplan/infrastructure-planning.html" aria-label="Infrastructure Planning branch">
+        <h2>Infrastructure Planning</h2>
+        <p>Development of essential infrastructure to support urban and regional growth.</p>
+      </a>
+    </article>
+
+  </section>
+</main>
+<script>
+  function filterBranches() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.branch-card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(filter) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>

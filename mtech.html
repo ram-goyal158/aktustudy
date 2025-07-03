@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore M.Tech / M.E. branches at AKTU Study: Computer Science, Data Science, Software Engineering, VLSI Design, Power Systems, Structural Engineering, and more." />
+  <meta name="keywords" content="M.Tech branches, Master of Engineering, Computer Science Engineering, AI & ML, Software Engineering, VLSI Design, Power Systems, Structural Engineering, Thermal Engineering, Renewable Energy, Robotics" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your M.Tech / M.E. Branch | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    article.branch-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+    }
+    article.branch-card:hover,
+article.branch-card:focus-within {
+  background-color: #e0f0ff; /* Light blue */
+  box-shadow: 0 8px 28px rgba(10,35,66,0.3);
+  transform: translateY(-6px);
+}
+
+    article.branch-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: #0a2342;
+    }
+    article.branch-card p {
+      color: #234a78;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    article.branch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      outline-offset: 4px;
+    }
+    article.branch-card a:focus,
+    article.branch-card a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your M.Tech / M.E. Branch</h1>
+</header>
+
+<main>
+  <div style="text-align:center; margin-bottom: 2rem;">
+  <input type="text" id="searchInput" placeholder="Search M.Tech Branch..." onkeyup="filterBranches()"
+    style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 20px; border: 1px solid #3a6ea5; font-size: 1rem;" />
+</div>
+
+  <section aria-label="M.Tech Branches" class="branch-grid">
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/cse.html" aria-label="Computer Science & Engineering branch">
+        <h2>Computer Science & Engineering</h2>
+        <p>Advanced computing, algorithms, and research in computer science.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/datascience.html" aria-label="Data Science / AI & ML branch">
+        <h2>Data Science / AI & ML</h2>
+        <p>Machine learning, artificial intelligence, and big data analytics.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/software-engineering.html" aria-label="Software Engineering branch">
+        <h2>Software Engineering</h2>
+        <p>Software development methodologies and project management.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/vlsi-design.html" aria-label="VLSI Design branch">
+        <h2>VLSI Design</h2>
+        <p>Very-large-scale integration for designing microchips and circuits.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/power-systems.html" aria-label="Power Systems branch">
+        <h2>Power Systems</h2>
+        <p>Generation, transmission, and distribution of electrical power.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/structural-engineering.html" aria-label="Structural Engineering branch">
+        <h2>Structural Engineering</h2>
+        <p>Design and analysis of buildings, bridges, and other structures.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/thermal-engineering.html" aria-label="Thermal Engineering branch">
+        <h2>Thermal Engineering</h2>
+        <p>Heat transfer, thermodynamics, and energy systems.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/environmental-engineering.html" aria-label="Environmental Engineering branch">
+        <h2>Environmental Engineering</h2>
+        <p>Engineering solutions for environmental protection and sustainability.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/communication-systems.html" aria-label="Communication Systems branch">
+        <h2>Communication Systems</h2>
+        <p>Telecommunication networks, signal processing, and wireless tech.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/control-systems.html" aria-label="Control Systems branch">
+        <h2>Control Systems</h2>
+        <p>Automation and control theory for industrial applications.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/signal-processing.html" aria-label="Signal Processing branch">
+        <h2>Signal Processing</h2>
+        <p>Processing and analysis of signals for communications and imaging.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/cadcam.html" aria-label="CAD/CAM branch">
+        <h2>CAD/CAM</h2>
+        <p>Computer-aided design and manufacturing technologies.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/renewable-energy.html" aria-label="Renewable Energy branch">
+        <h2>Renewable Energy</h2>
+        <p>Solar, wind, and other sustainable energy systems.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/mtech/robotics.html" aria-label="Robotics branch">
+        <h2>Robotics</h2>
+        <p>Design and application of robotic systems and automation.</p>
+      </a>
+    </article>
+
+  </section>
+</main>
+<script>
+  function filterBranches() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.branch-card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(filter) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>

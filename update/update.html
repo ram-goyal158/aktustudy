@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latest AKTU Updates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0D4C92;
+      --secondary: #064663;
+      --accent: #d6e4f0;
+      --text: #333;
+      --light-text: #666;
+      --bg: #fdfdfd;
+      --card-bg: #fff;
+    }
+    
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      position: relative;
+      animation: fadeInDown 0.8s ease;
+    }
+    
+    header h1 i {
+      margin-right: 10px;
+      animation: pulse 2s infinite;
+    }
+    
+    section#aktu-updates {
+      padding: 3rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex: 1;
+    }
+    
+    #aktu-updates h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    #aktu-updates h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), transparent);
+      border-radius: 3px;
+    }
+    
+    #update-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .update-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.8rem;
+      border: 1px solid var(--accent);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+    
+    .update-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+    }
+    
+    .update-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .update-card:hover::before {
+      width: 8px;
+    }
+    
+    .update-card h3 {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      position: relative;
+      padding-left: 15px;
+    }
+    
+    .update-card h3::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+    
+    .update-card p {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+    
+    .update-card a {
+      color: var(--primary);
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .update-card a::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+    }
+    
+    .update-card a:hover {
+      color: var(--secondary);
+    }
+    
+    .update-card a:hover::after {
+      width: 100%;
+    }
+    
+    .update-card a i {
+      margin-right: 8px;
+      font-size: 0.9em;
+    }
+    
+    .update-date {
+      font-size: 0.85rem;
+      color: var(--light-text);
+      display: flex;
+      align-items: center;
+      margin-top: 1.2rem;
+    }
+    
+    .update-date i {
+      margin-right: 6px;
+      font-size: 0.9em;
+    }
+    
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 2rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+    
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.3), transparent);
+    }
+    
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    /* Card staggered animation */
+    .update-card:nth-child(1) { animation-delay: 0.1s; }
+    .update-card:nth-child(2) { animation-delay: 0.2s; }
+    .update-card:nth-child(3) { animation-delay: 0.3s; }
+    .update-card:nth-child(4) { animation-delay: 0.4s; }
+    .update-card:nth-child(5) { animation-delay: 0.5s; }
+    .update-card:nth-child(6) { animation-delay: 0.6s; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { 
+        font-size: 1.5rem; 
+      }
+      
+      #aktu-updates h2 {
+        font-size: 1.3rem;
+      }
+      
+      #update-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header h1 { 
+        font-size: 1.3rem; 
+      }
+      
+      section#aktu-updates {
+        padding: 2rem 1rem;
+      }
+      
+      .update-card {
+        padding: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-bullhorn"></i> AKTU Study – Latest Updates</h1>
+  </header>
+
+  <section id="aktu-updates">
+    <h2>Check Latest University Notices & Announcements</h2>
+    <div id="update-cards"></div>
+  </section>
+
+  <footer>
+    © 2025 AKTU Study | All Rights Reserved
+  </footer>
+
+  <script>
+  const sheetURL = "https://docs.google.com/spreadsheets/d/1hQJKGj9meRfI5Q14gEsVVQvKP5CilWwFyqW5fj6YAX4/gviz/tq?tqx=out:json&tq=select A,B,C,D order by D desc";
+  const container = document.getElementById("update-cards");
+
+  // Show loading state
+  container.innerHTML = `
+    <div class="update-card" style="grid-column: 1/-1; text-align: center;">
+      <div class="loading-spinner">
+        <i class="fas fa-circle-notch fa-spin"></i>
+        <p>Loading updates...</p>
+      </div>
+    </div>
+  `;
+
+  // Add some CSS for the spinner
+  const style = document.createElement('style');
+  style.textContent = `
+    .loading-spinner {
+      padding: 2rem;
+      color: var(--primary);
+    }
+    .loading-spinner i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    @keyframes fa-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  `;
+  document.head.appendChild(style);
+
+  fetch(sheetURL)
+    .then(res => {
+      if (!res.ok) throw new Error('Network response was not ok');
+      return res.text();
+    })
+    .then(data => {
+      const json = JSON.parse(data.substr(47).slice(0, -2));
+      const rows = json.table.rows;
+      
+      // Clear loading state
+      container.innerHTML = '';
+      
+      if (rows.length === 0) {
+        container.innerHTML = `
+          <div class="update-card" style="grid-column: 1/-1; text-align: center;">
+            <h3>No Updates Available</h3>
+            <p>There are currently no updates to display.</p>
+          </div>
+        `;
+        return;
+      }
+
+      rows.forEach((row, index) => {
+        const title = row.c[0]?.v || "No Title";
+        const desc = row.c[1]?.v || "";
+        const link = row.c[2]?.v || "#";
+        const date = row.c[3]?.f || row.c[3]?.v || "";
+
+        const card = document.createElement("div");
+        card.className = "update-card";
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.innerHTML = `
+          <h3>${title}</h3>
+          <p>${desc}</p>
+          <p><a href="${link}" target="_blank"><i class="fas fa-external-link-alt"></i>View Notice</a></p>
+          <p class="update-date"><i class="far fa-calendar-alt"></i> ${date}</p>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+      container.innerHTML = `
+        <div class="update-card" style="grid-column: 1/-1; text-align: center;">
+          <h3>Unable to Load Updates</h3>
+          <p>We're having trouble fetching the latest updates. Please check back later.</p>
+          <p><a href="#" onclick="window.location.reload()"><i class="fas fa-sync-alt"></i> Try Again</a></p>
+          <p style="font-size:0.8rem;margin-top:1rem;">Admin: Check sharing settings</p>
+        </div>
+      `;
+    });
+</script>
+</body>
+</html>

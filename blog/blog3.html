@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AKTU 30-Day Study + Revision Plan with daily timetable for B.Tech, B.Pharma, and MBA students." />
+  <title>AKTU Study + Revision Time Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-dark: #0a2342;
+      --primary-light: #3b5998;
+      --accent-blue: #007bff;
+      --text-dark: #0a2342;
+      --text-light: #4a5568;
+      --bg-color: #f5f7fa;
+      --card-bg: #ffffff;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    header p {
+      font-size: 1rem;
+      max-width: 750px;
+      margin: 1rem auto 0;
+      opacity: 0.9;
+      animation: fadeIn 1s ease-out 0.3s both;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+    }
+
+    h2 i {
+      color: var(--accent-blue);
+      margin-right: 10px;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      color: var(--text-light);
+      position: relative;
+    }
+
+    li::before {
+      content: "✅";
+      position: absolute;
+      left: -1.2rem;
+      color: var(--accent-blue);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: var(--accent-blue);
+      color: white;
+    }
+
+    .highlight {
+      background: #e6f0ff;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: var(--text-light);
+    }
+
+    a {
+      color: var(--accent-blue);
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+
+    .week-title {
+    font-size: 1.3rem;
+    color: #007bff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .week-title i {
+    margin-right: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .week-title:hover {
+    color: #0a58ca; /* Darker blue on hover */
+    transform: translateX(5px); /* Move right slightly */
+  }
+  
+  .week-title:hover i {
+    animation: bounce 0.5s ease infinite alternate; /* Icon bounce effect */
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+  }
+
+    /* Animations */
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="week-title"><h1><i class="fas fa-calendar-alt"></i> Time Table for AKTU Students – Study + Revision Plan</h1></p>
+    <p style="color: white;">Manage your semester exams stress-free with this daily + weekly study strategy tailored for AKTU students.</p>
+  </header>
+
+  <main>
+    <section style="animation-delay: 0.2s;">
+      <h2><i class="fas fa-question-circle"></i> Why Do You Need a Study Time Table?</h2>
+      <ul>
+        <li>To cover the entire syllabus on time</li>
+        <li>To avoid last-minute cramming</li>
+        <li>To ensure proper revision and practice</li>
+        <li>To stay consistent and reduce stress</li>
+      </ul>
+    </section>
+
+    <section style="animation-delay: 0.4s;">
+      <h2><i class="fas fa-calendar-week"></i> 30-Day Study + Revision Plan</h2>
+      <p><strong>🕒 Study Duration:</strong> 6–8 hours/day (flexible)</p>
+      <p><strong>🎯 Goal:</strong> Cover all units, solve PYQs, revise twice</p>
+
+      <h3>🔵 Week 1: Syllabus Coverage Starts (Day 1–7)</h3>
+      <table>
+        <thead>
+          <tr><th>Time Slot</th><th>Task</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>6:00 – 7:00 AM</td><td>Light revision / formula recap</td></tr>
+          <tr class="highlight"><td>9:00 – 11:00 AM</td><td>Subject 1 – New topics (Unit 1 & 2)</td></tr>
+          <tr><td>11:30 – 1:30 PM</td><td>Subject 2 – New topics</td></tr>
+          <tr><td>4:00 – 6:00 PM</td><td>Subject 3 – PYQs + Diagram Practice</td></tr>
+          <tr><td>8:00 – 9:00 PM</td><td>Notes making / Daily revision</td></tr>
+        </tbody>
+      </table>
+
+      <h3>🔵 Week 2: Deep Study + PYQs (Day 8–14)</h3>
+      <ul>
+        <li>Start solving previous year question papers.</li>
+        <li>Focus on numericals, diagrams, and derivations.</li>
+        <li>Study at least 3 subjects daily.</li>
+      </ul>
+
+      <h3>🔵 Week 3: Mock Tests + Revisions (Day 15–21)</h3>
+      <ul>
+        <li>Daily mock test (3 hours)</li>
+        <li>Review weak topics from notes</li>
+        <li>Practice exam-style answers</li>
+      </ul>
+
+      <h3>🔵 Week 4: Rapid Fire Revision (Day 22–28)</h3>
+      <ul>
+        <li><strong>50% Time:</strong> Quick subject-wise revision</li>
+        <li><strong>30% Time:</strong> PYQ solving</li>
+        <li><strong>20% Time:</strong> Flashcards + Self-tests</li>
+      </ul>
+    </section>
+
+    <section style="animation-delay: 0.6s;">
+      <h2><i class="fas fa-clock"></i> Daily Time Table (Sample)</h2>
+      <table>
+        <thead>
+          <tr><th>Time</th><th>Task</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>6:00 – 7:00 AM</td><td>Wake up & revise formulas</td></tr>
+          <tr><td>9:00 – 11:00 AM</td><td>Subject 1 (Theory + Practice)</td></tr>
+          <tr><td>11:30 – 1:30 PM</td><td>Subject 2 (Numericals / PYQs)</td></tr>
+          <tr><td>2:00 – 3:00 PM</td><td>Lunch + Short rest</td></tr>
+          <tr><td>4:00 – 6:00 PM</td><td>Subject 3 (Important topics)</td></tr>
+          <tr><td>7:00 – 8:00 PM</td><td>Walk or relaxation</td></tr>
+          <tr><td>8:00 – 9:30 PM</td><td>Revision & notes</td></tr>
+          <tr><td>10:30 PM</td><td>Sleep early</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section style="animation-delay: 0.8s;">
+      <h2><i class="fas fa-gift"></i> Bonus Tips</h2>
+      <ul>
+        <li>📱 Turn off phone notifications during study hours</li>
+        <li>📝 Make your own flashcards for formulas</li>
+        <li>🎧 Listen to recorded lectures while traveling</li>
+        <li>🧪 Practice practicals with real understanding</li>
+        <li>📌 Use the AKTU syllabus for topic tracking</li>
+      </ul>
+
+      <p><strong>💡 Final Note:</strong><br>
+      No matter which year or branch you're in — a focused time table is your best exam weapon. Study consistently, revise wisely, and trust your process.</p>
+
+      <p style="margin-top: 1.5rem; font-weight: 600;">
+        ✨ Want free AKTU notes, syllabus, previous year papers, and revision sheets?<br>
+        👉 Visit our <a href="#">Free Resources</a> section now and boost your prep!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 AKTU Study Planner. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = document.querySelectorAll('section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
