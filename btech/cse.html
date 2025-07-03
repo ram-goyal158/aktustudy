@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore semester-wise B.Tech subjects for all 4 years including core subjects, electives, and projects. Ideal for AKTU and similar university students." />
+  <meta name="keywords" content="B.Tech subjects, AKTU syllabus, semester subjects, engineering topics, first year engineering, computer science subjects, electives" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your Subject | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    .search-bar {
+      text-align: center;
+      margin: 1.5rem;
+    }
+    .search-bar input {
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      width: 90%;
+      max-width: 480px;
+      border: 2px solid #0a2342;
+      border-radius: 12px;
+    }
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.6rem;
+    }
+    .subject-card {
+      background: white;
+      padding: 1.2rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(10,35,66,0.15);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .subject-card:hover {
+      background-color: #d6e6ff;
+      border-color: #0a2342;
+      transform: translateY(-4px);
+    }
+    .subject-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+    .semester-label {
+      font-weight: bold;
+      margin: 2rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Choose Your Subject - Semester-wise</h1>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for a subject..." onkeyup="filterSubjects()">
+  </div>
+
+  <main id="subjectContainer">
+    <div class="semester-label">Semester 1</div>
+    <div class="subject-grid">
+      <div class="subject-card"><h3>Engineering Mathematics‑I</h3></div>
+      <div class="subject-card"><h3>Engineering Physics</h3></div>
+      <div class="subject-card"><h3>Engineering Chemistry</h3></div>
+      <div class="subject-card"><h3>Basic Electrical Engineering</h3></div>
+      <div class="subject-card"><h3>Computer Programming (C/C++)</h3></div>
+      <div class="subject-card"><h3>Engineering Graphics</h3></div>
+      <div class="subject-card"><h3>Environmental Science & Ecology</h3></div>
+      <div class="subject-card"><h3>Communication Skills</h3></div>
+    </div>
+
+    <div class="semester-label">Semester 2</div>
+    <div class="subject-grid">
+      <div class="subject-card"><h3>Engineering Mathematics‑II</h3></div>
+      <div class="subject-card"><h3>Engineering Mechanics</h3></div>
+      <div class="subject-card"><h3>Basic Electronics Engineering</h3></div>
+      <div class="subject-card"><h3>Workshop Practice</h3></div>
+      <div class="subject-card"><h3>Programming / Data Structures</h3></div>
+    </div>
+
+    <div class="semester-label">Semester 3</div>
+    <div class="subject-grid">
+      <div class="subject-card"><h3>Discrete Mathematics</h3></div>
+      <div class="subject-card"><h3>Digital Logic Design</h3></div>
+      <div class="subject-card"><h3>Electronic Devices & Circuits</h3></div>
+      <div class="subject-card"><h3>Object-Oriented Programming (Java/C++)</h3></div>
+      <div class="subject-card"><h3>Data Structures</h3></div>
+      <div class="subject-card"><h3>Applied Physics</h3></div>
+      <div class="subject-card"><h3>Applied Mathematics</h3></div>
+    </div>
+
+    <div class="semester-label">Semester 4</div>
+    <div class="subject-grid">
+      <div class="subject-card"><h3>Computer Organization & Architecture</h3></div>
+      <div class="subject-card"><h3>Signals & Systems</h3></div>
+      <div class="subject-card"><h3>Database Management Systems (DBMS)</h3></div>
+      <div class="subject-card"><h3>Strength of Materials</h3></div>
+      <div class="subject-card"><h3>Material Science</h3></div>
+      <div class="subject-card"><h3>Operating Systems (Introductory)</h3></div>
+      <div class="subject-card"><h3>Microprocessors (Basics + Lab)</h3></div>
+    </div>
+
+    <div class="semester-label">Semester 5</div>
+    <div class="subject-grid">
+      <div class="subject-card"><h3>Theory of Computation / Automata</h3></div>
+      <div class="subject-card"><h3>Design & Analysis of Algorithms</h3></div>
+      <div class="subject-card"><h3>Operating Systems (Advanced)</h3></div>
+      <div class="subject-card"><h3>Computer Networks (Basics)</h3></div>
+      <div class="subject-card"><h3>Microprocessors & Interfacing (Advanced)</h3></div>
+      <div class="subject-card"><h3>Elective‑I (AI, IoT, etc.)</h3></div>
+    </div>
+
+    <div class="semester-label">Semester 6</div>
+    <div class="subject-grid">
+      <div class="subject-card"><h3>Software Engineering</h3></div>
+      <div class="subject-card"><h3>Web Technologies / Web Development</h3></div>
+      <div class="subject-card"><h3>Advanced Database Systems</h3></div>
+      <div class="subject-card"><h3>Compiler Design</h3></div>
+      <div class="subject-card"><h3>Cyber Security</h3></div>
+      <div class="subject-card"><h3>Python Workshop</h3></div>
+      <div class="subject-card"><h3>Elective‑II (Cloud Computing, ML)</h3></div>
+    </div>
+
+    <div class="semester-label">Semester 7</div>
+    <div class="subject-grid">
+      <div class="subject-card"><h3>Distributed Systems</h3></div>
+      <div class="subject-card"><h3>Advanced Web</h3></div>
+      <div class="subject-card"><h3>Mobile Computing</h3></div>
+      <div class="subject-card"><h3>Cloud Computing</h3></div>
+      <div class="subject-card"><h3>Artificial Intelligence</h3></div>
+      <div class="subject-card"><h3>Machine Learning</h3></div>
+      <div class="subject-card"><h3>Major Project – Phase‑I</h3></div>
+      <div class="subject-card"><h3>Elective‑III (Big Data, IoT)</h3></div>
+      <div class="subject-card"><h3>Open Elective</h3></div>
+      <div class="subject-card"><h3>Internship</h3></div>
+    </div>
+
+    <div class="semester-label">Semester 8</div>
+    <div class="subject-grid">
+      <div class="subject-card"><h3>Major Project – Phase‑II</h3></div>
+      <div class="subject-card"><h3>Elective‑IV (Advanced Topics)</h3></div>
+      <div class="subject-card"><h3>Seminar</h3></div>
+      <div class="subject-card"><h3>Minor Project</h3></div>
+    </div>
+  </main>
+
+  <script>
+    function filterSubjects() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".subject-card");
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>
