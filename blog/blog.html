@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKTU Study Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #0a58ca;
+      --primary-dark: #0d47a1;
+      --secondary-color: #f0f4ff;
+      --text-color: #333;
+      --light-text: #666;
+      --card-bg: #fff;
+      --section-padding: 2.5rem;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+    }
+    
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6V1tvFP-KUEg.woff2) format('woff2');
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    /* Header Styles */
+    .header {
+      text-align: center;
+      padding: 3rem 0 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 88, 202, 0.1) 0%, rgba(255,255,255,0) 60%);
+      z-index: -1;
+    }
+    
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      animation: fadeInDown 0.8s ease-out;
+    }
+    
+    h1::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+    
+    .header p {
+      color: var(--light-text);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      animation: fadeIn 1s ease-out 0.3s both;
+    }
+
+    /* Section Styles */
+    .section {
+      margin-bottom: var(--section-padding);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .section:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(3) { animation-delay: 0.3s; }
+    .section:nth-child(4) { animation-delay: 0.4s; }
+    .section:nth-child(5) { animation-delay: 0.5s; }
+    .section:nth-child(6) { animation-delay: 0.6s; }
+    .section:nth-child(7) { animation-delay: 0.7s; }
+    .section:nth-child(8) { animation-delay: 0.8s; }
+    .section:nth-child(9) { animation-delay: 0.9s; }
+
+    .section h2 {
+      color: var(--primary-dark);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-left: 15px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
+    .section h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 70%;
+      background: var(--primary-color);
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .section h2:hover::before {
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary-color), #4facfe);
+    }
+    
+    .section h2 i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+    }
+
+    /* Blog List Styles */
+    .blog-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .blog-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(10, 88, 202, 0.1);
+    }
+    
+    .blog-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, var(--primary-color), #4facfe);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+    
+    .blog-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .blog-card h3 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .blog-card h3::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: rgba(10, 88, 202, 0.3);
+      transition: width 0.3s ease;
+    }
+    
+    .blog-card:hover h3::after {
+      width: 80px;
+      background: var(--primary-color);
+    }
+    
+    .blog-card p {
+      font-size: 0.9rem;
+      color: var(--light-text);
+      margin-bottom: 1rem;
+    }
+    
+    .blog-card .read-more {
+      display: inline-block;
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease 0.1s;
+    }
+    
+    .blog-card:hover .read-more {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .blog-card .read-more i {
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+    
+    .blog-card:hover .read-more:hover i {
+      transform: translateX(3px);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      color: var(--light-text);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Hover effects */
+    .blog-card {
+      opacity: 0;
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    .blog-list .blog-card:nth-child(1) { animation-delay: 0.1s; }
+    .blog-list .blog-card:nth-child(2) { animation-delay: 0.2s; }
+    .blog-list .blog-card:nth-child(3) { animation-delay: 0.3s; }
+    .blog-list .blog-card:nth-child(4) { animation-delay: 0.4s; }
+    .blog-list .blog-card:nth-child(5) { animation-delay: 0.5s; }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .header p {
+        font-size: 1rem;
+      }
+      
+      .section h2 {
+        font-size: 1.3rem;
+      }
+      
+      .blog-list {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .section {
+        padding: 0 10px;
+      }
+      
+      .blog-card {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1><i class="fas fa-book-open"></i> AKTU Study Blog</h1>
+      <p>Your ultimate resource for exam preparation, study materials, and academic success at AKTU</p>
+    </header>
+
+    <div class="section">
+      <h2><i class="fas fa-bullseye"></i> Exam Preparation & Tips</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>How to Prepare for AKTU Semester Exams in 30 Days</h3>
+          <p>Learn the most effective strategies to cover your syllabus and score well with just one month of preparation.</p>
+          <a href="blog1.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Top 10 Study Tips for B.Tech Students in AKTU</h3>
+          <p>Essential study techniques that will help you maximize your learning efficiency and retention.</p>
+          <a href="blog2.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Time Table for AKTU Students – Study + Revision Plan</h3>
+          <p>Download our optimized study schedule template designed specifically for AKTU's curriculum.</p>
+          <a href="blog3.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>How to Score 80%+ in AKTU Without Coaching</h3>
+          <p>Proven self-study methods that helped hundreds of students achieve distinction marks.</p>
+          <a href="blog4.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-file-alt"></i> Syllabus, Notes, & Question Bank</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>AKTU B.Tech CSE Semester-wise Syllabus [2025 Updated]</h3>
+          <p>Complete syllabus breakdown with subject codes, credit details, and important topics.</p>
+          <a href="blog5.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Important Questions for Data Analytics – AKTU 3rd Year</h3>
+          <p>Curated list of most important questions with solutions for Data Analytics (KCS052).</p>
+          <a href="blog6.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Previous Year Question Papers – Download Free PDFs (2020–2024)</h3>
+          <p>Collection of all previous year papers organized by semester and branch.</p>
+          <a href="blog7.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Most Repeated Questions in AKTU Exams – Branch-wise Analysis</h3>
+          <p>Identify high-probability questions that appear frequently in AKTU exams.</p>
+          <a href="blog8.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-flask"></i> Branch-specific Guides</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>Best Resources for B.Tech CSE Students in AKTU</h3>
+          <p>Recommended books, YouTube channels, and websites for Computer Science students.</p>
+          <a href="blog9.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Mechanical Engineering AKTU: Subject List, Labs, and Projects</h3>
+          <p>Complete guide to ME curriculum with practical lab manuals and project ideas.</p>
+          <a href="blog10.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>AKTU ECE Study Guide – Books, Notes, and Project Ideas</h3>
+          <p>Essential resources for Electronics and Communication Engineering students.</p>
+          <a href="blog11.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Top 5 Mini Project Ideas for Electrical Engineering Students (AKTU)</h3>
+          <p>Innovative project ideas that can be completed within semester deadlines.</p>
+          <a href="blog12.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-bullhorn"></i> Official Announcements & Updates</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>AKTU Result Declared – How to Check Yours Fast</h3>
+          <p>Step-by-step guide to checking your results quickly during peak traffic times.</p>
+          <a href="blog13.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>AKTU Exam Date Sheet Released – Download PDF Here</h3>
+          <p>Direct links to download date sheets and important exam schedule notes.</p>
+          <a href="blog14.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>AKTU Admit Card 2025 – How to Download from ERP Portal</h3>
+          <p>Troubleshooting guide for common admit card download issues.</p>
+          <a href="blog15.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-briefcase"></i> Career & Placement</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>Best Internships for AKTU Students – Branch-wise Guide</h3>
+          <p>Where to find internships and how to apply while maintaining your academics.</p>
+          <a href="blog16.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>How to Build a Resume for AKTU Campus Placement</h3>
+          <p>Resume templates and tips specifically for AKTU's placement process.</p>
+          <a href="blog17.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Top Online Courses for AKTU Students (Free + Paid)</h3>
+          <p>Skill-building courses that complement your AKTU curriculum.</p>
+          <a href="blog18.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>AKTU T&P Cell – How to Register & Apply for Jobs</h3>
+          <p>Complete walkthrough of the Training & Placement portal registration.</p>
+          <a href="blog19.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-brain"></i> Motivation & Productivity</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>How to Stay Motivated During Exam Season</h3>
+          <p>Psychological techniques to maintain focus and avoid burnout.</p>
+          <a href="blog20.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Best Study Music & YouTube Channels for Focus</h3>
+          <p>Curated playlists and ambient sounds to enhance concentration.</p>
+          <a href="blog21.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>How to Reduce Phone Addiction While Studying</h3>
+          <p>Practical methods to minimize digital distractions during study sessions.</p>
+          <a href="blog22.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-tools"></i> Tools & Resources</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>Top 10 Websites Every AKTU Student Must Use</h3>
+          <p>Essential online resources for notes, tutorials, and reference materials.</p>
+          <a href="blog23.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>Best Apps for Note-Taking, Revision & Reminders</h3>
+          <p>Mobile applications that can supercharge your study routine.</p>
+          <a href="blog24.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card">
+          <h3>How to Use ChatGPT, Notion & Canva for Study & Project Work</h3>
+          <p>Leverage modern tools to enhance your academic productivity.</p>
+          <a href="blog25.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-star"></i> Bonus Tips</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>AKTU One-Stop Guide: Syllabus, Result, Datesheet, ERP Login</h3>
+          <p>All essential AKTU links and processes explained in one place.</p>
+          <a href="blog26.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2025 AKTU Study Blog | Helping Students Succeed Since 2023</p>
+    </footer>
+  </div>
+
+</body>
+</html>

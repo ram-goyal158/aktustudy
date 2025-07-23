@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="B.Tech Electronics & Communication Engineering semester wise subjects list. Explore Engineering Mathematics, Analog Circuits, VLSI, Communication Systems, Microwave Engineering, and more. Easy search and selection." />
+  <meta name="keywords" content="B.Tech ECE subjects, Electronics & Communication Engineering subjects, ECE semester subjects, Analog Circuits, VLSI, Communication Systems, Microwave Engineering" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your Subject | B.Tech Electronics & Communication Engineering</title>
+
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem 3rem;
+      width: 100%;
+    }
+
+    .search-container {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 2px solid #0a2342;
+      transition: border-color 0.3s ease;
+    }
+    .search-container input:focus {
+      outline: none;
+      border-color: #3a6ea5;
+      box-shadow: 0 0 8px #3a6ea5aa;
+    }
+
+    .semester-section {
+      margin-bottom: 3rem;
+    }
+    .semester-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0a2342;
+      margin-bottom: 1rem;
+      border-left: 6px solid #0a2342;
+      padding-left: 12px;
+    }
+
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem;
+    }
+
+    .subject-card {
+      background: white;
+      border-radius: 14px;
+      padding: 1.4rem 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: default;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      border: 2px solid transparent;
+      user-select: none;
+    }
+    .subject-card:hover,
+    .subject-card:focus-within {
+      background-color: #3a6ea5;
+      color: white;
+      box-shadow: 0 8px 28px rgba(10,35,66,0.4);
+      transform: translateY(-5px);
+      border-color: #0a2342;
+      outline: none;
+    }
+
+    /* Remove underline from text */
+    .subject-card p {
+      margin: 0;
+      font-size: 1rem;
+      text-decoration: none !important;
+    }
+
+    /* Responsive typography */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .semester-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your Subject | B.Tech Electronics & Communication Engineering</h1>
+</header>
+
+<main>
+  <div class="search-container" role="search" aria-label="Search subjects">
+    <input type="search" id="subjectSearch" placeholder="Search subjects..." aria-describedby="searchHelp" />
+    <small id="searchHelp" style="color:#0a2342; opacity:0.7;">Type to filter subjects</small>
+  </div>
+
+  <!-- Semester 1 -->
+  <section class="semester-section" data-semester="1" aria-labelledby="sem1-title">
+    <h2 id="sem1-title" class="semester-title">1st Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Engineering Mathematics - I</article>
+      <article class="subject-card" tabindex="0">Engineering Physics</article>
+      <article class="subject-card" tabindex="0">Engineering Chemistry</article>
+      <article class="subject-card" tabindex="0">Basic Electrical Engineering</article>
+      <article class="subject-card" tabindex="0">Engineering Mechanics</article>
+      <article class="subject-card" tabindex="0">Engineering Drawing / Graphics</article>
+      <article class="subject-card" tabindex="0">Basic Electronics Engineering</article>
+      <article class="subject-card" tabindex="0">Communication Skills / English</article>
+      <article class="subject-card" tabindex="0">Environmental Science</article>
+    </div>
+  </section>
+
+  <!-- Semester 2 -->
+  <section class="semester-section" data-semester="2" aria-labelledby="sem2-title">
+    <h2 id="sem2-title" class="semester-title">2nd Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Engineering Mathematics - II</article>
+      <article class="subject-card" tabindex="0">Network Theory</article>
+      <article class="subject-card" tabindex="0">Digital Electronics</article>
+      <article class="subject-card" tabindex="0">Electronic Devices and Circuits</article>
+      <article class="subject-card" tabindex="0">Basic Civil Engineering</article>
+      <article class="subject-card" tabindex="0">Data Structures and Algorithms (Programming in C)</article>
+      <article class="subject-card" tabindex="0">Physics / Electronics Lab</article>
+      <article class="subject-card" tabindex="0">Digital Electronics Lab</article>
+      <article class="subject-card" tabindex="0">Programming Lab (C Language)</article>
+    </div>
+  </section>
+
+  <!-- Semester 3 -->
+  <section class="semester-section" data-semester="3" aria-labelledby="sem3-title">
+    <h2 id="sem3-title" class="semester-title">3rd Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Engineering Mathematics - III</article>
+      <article class="subject-card" tabindex="0">Signals and Systems</article>
+      <article class="subject-card" tabindex="0">Analog Circuits</article>
+      <article class="subject-card" tabindex="0">Electromagnetic Field Theory</article>
+      <article class="subject-card" tabindex="0">Electronic Measurements and Instrumentation</article>
+      <article class="subject-card" tabindex="0">Communication Systems</article>
+      <article class="subject-card" tabindex="0">Analog Circuits Lab</article>
+      <article class="subject-card" tabindex="0">Communication Systems Lab</article>
+      <article class="subject-card" tabindex="0">Measurements and Instrumentation Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 4 -->
+  <section class="semester-section" data-semester="4" aria-labelledby="sem4-title">
+    <h2 id="sem4-title" class="semester-title">4th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Engineering Mathematics - IV</article>
+      <article class="subject-card" tabindex="0">Control Systems</article>
+      <article class="subject-card" tabindex="0">Microprocessors and Microcontrollers</article>
+      <article class="subject-card" tabindex="0">Digital Communication</article>
+      <article class="subject-card" tabindex="0">Linear Integrated Circuits</article>
+      <article class="subject-card" tabindex="0">Elective-I (Basics of VLSI / Embedded Systems etc.)</article>
+      <article class="subject-card" tabindex="0">Microprocessor Lab</article>
+      <article class="subject-card" tabindex="0">Digital Communication Lab</article>
+      <article class="subject-card" tabindex="0">Control Systems Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 5 -->
+  <section class="semester-section" data-semester="5" aria-labelledby="sem5-title">
+    <h2 id="sem5-title" class="semester-title">5th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Digital Signal Processing</article>
+      <article class="subject-card" tabindex="0">VLSI Design</article>
+      <article class="subject-card" tabindex="0">Antennas and Wave Propagation</article>
+      <article class="subject-card" tabindex="0">Elective-II (Wireless Communication / Optical Communication)</article>
+      <article class="subject-card" tabindex="0">Elective-III (Power Electronics / Robotics etc.)</article>
+      <article class="subject-card" tabindex="0">Microcontroller Lab</article>
+      <article class="subject-card" tabindex="0">VLSI Lab</article>
+      <article class="subject-card" tabindex="0">Signal Processing Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 6 -->
+  <section class="semester-section" data-semester="6" aria-labelledby="sem6-title">
+    <h2 id="sem6-title" class="semester-title">6th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Microwave Engineering</article>
+      <article class="subject-card" tabindex="0">Satellite Communication</article>
+      <article class="subject-card" tabindex="0">Elective-IV (Biomedical Instrumentation / IoT / Sensor Networks)</article>
+      <article class="subject-card" tabindex="0">Elective-V (Advanced Digital Communication / MEMS etc.)</article>
+      <article class="subject-card" tabindex="0">Mini Project / Seminar</article>
+      <article class="subject-card" tabindex="0">Microwave Lab</article>
+      <article class="subject-card" tabindex="0">Communication Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 7 -->
+  <section class="semester-section" data-semester="7" aria-labelledby="sem7-title">
+    <h2 id="sem7-title" class="semester-title">7th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Elective-VI (Advanced VLSI Design / Network Security / AI in ECE)</article>
+      <article class="subject-card" tabindex="0">Elective-VII</article>
+      <article class="subject-card" tabindex="0">Major Project Phase - I</article>
+      <article class="subject-card" tabindex="0">Professional Ethics and Management</article>
+      <article class="subject-card" tabindex="0">Seminar / Technical Writing</article>
+    </div>
+  </section>
+
+  <!-- Semester 8 -->
+  <section class="semester-section" data-semester="8" aria-labelledby="sem8-title">
+    <h2 id="sem8-title" class="semester-title">8th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Major Project Phase - II</article>
+      <article class="subject-card" tabindex="0">Industrial Training / Internship Report</article>
+      <article class="subject-card" tabindex="0">Elective-VIII (Optional)</article>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Live Search Filter
+  const searchInput = document.getElementById('subjectSearch');
+  const subjectCards = document.querySelectorAll('.subject-card');
+
+  searchInput.addEventListener('input', () => {
+    const filter = searchInput.value.toLowerCase().trim();
+
+    subjectCards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+
+</body>
+</html>

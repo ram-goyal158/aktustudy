@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore M.Pharm branches at AKTU Study: Pharmaceutics, Pharmacology, Clinical Pharmacy, Industrial Pharmacy, Quality Assurance and more." />
+  <meta name="keywords" content="M.Pharm branches, Master of Pharmacy, Pharmaceutics, Pharmacology, Pharmaceutical Chemistry, Clinical Pharmacy, Industrial Pharmacy, Pharmaceutical Analysis, Quality Assurance" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your M.Pharm Branch | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    article.branch-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #3a6ea5;
+    }
+    article.branch-card:hover,
+article.branch-card:focus-within {
+  background-color: #e0f0ff; /* Light blue */
+  box-shadow: 0 8px 28px rgba(10,35,66,0.3);
+  transform: translateY(-6px);
+}
+
+    article.branch-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: #0a2342;
+    }
+    article.branch-card p {
+      color: #234a78;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    article.branch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your M.Pharm Branch</h1>
+</header>
+
+<main>
+  <div style="text-align:center; margin-bottom: 2rem;">
+  <input type="text" id="searchInput" placeholder="Search M.Pharm Branch..." onkeyup="filterBranches()"
+    style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 20px; border: 1px solid #3a6ea5; font-size: 1rem;" />
+</div>
+
+  <section aria-label="M.Pharm Branches" class="branch-grid">
+
+    <article class="branch-card">
+      <a href="branches/mpharm/pharmaceutics.html" aria-label="Pharmaceutics">
+        <h2>Pharmaceutics</h2>
+        <p>Formulation, manufacturing, and delivery of pharmaceutical products.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mpharm/pharmacology.html" aria-label="Pharmacology">
+        <h2>Pharmacology</h2>
+        <p>Study of drug action, mechanisms, and therapeutic uses.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mpharm/pharmaceutical-chemistry.html" aria-label="Pharmaceutical Chemistry">
+        <h2>Pharmaceutical Chemistry</h2>
+        <p>Chemical properties and synthesis of pharmaceutical agents.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mpharm/pharmacognosy.html" aria-label="Pharmacognosy">
+        <h2>Pharmacognosy</h2>
+        <p>Medicinal properties of natural sources and herbal drugs.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mpharm/pharmaceutical-analysis.html" aria-label="Pharmaceutical Analysis">
+        <h2>Pharmaceutical Analysis</h2>
+        <p>Analytical techniques for quality control of drugs and formulations.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mpharm/clinical-pharmacy.html" aria-label="Clinical Pharmacy">
+        <h2>Clinical Pharmacy</h2>
+        <p>Patient care, drug therapy optimization, and clinical research.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mpharm/industrial-pharmacy.html" aria-label="Industrial Pharmacy">
+        <h2>Industrial Pharmacy</h2>
+        <p>Pharmaceutical production, process development, and scale-up.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mpharm/quality-assurance.html" aria-label="Quality Assurance">
+        <h2>Quality Assurance</h2>
+        <p>Ensuring compliance, safety, and standards in pharma manufacturing.</p>
+      </a>
+    </article>
+
+  </section>
+</main>
+<script>
+  function filterBranches() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.branch-card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(filter) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>

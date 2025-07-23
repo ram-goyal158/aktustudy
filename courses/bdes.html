@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore B.Des (Bachelor of Design) branches at AKTU Study: Fashion Design, Interior Design, Graphic Design, Industrial/Product Design, Communication Design, UX/UI Design, Game Design, Animation & Multimedia." />
+  <meta name="keywords" content="B.Des, Bachelor of Design, Fashion Design, Interior Design, Graphic Design, Industrial Design, Product Design, Communication Design, UX/UI Design, Game Design, Animation, Multimedia" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your B.Des Branch | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    article.branch-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #3a6ea5;
+    }
+    article.branch-card:hover,
+article.branch-card:focus-within {
+  background-color: #e0f0ff; /* Light blue */
+  box-shadow: 0 8px 28px rgba(10,35,66,0.3);
+  transform: translateY(-6px);
+}
+
+    article.branch-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: #0a2342;
+    }
+    article.branch-card p {
+      color: #234a78;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    article.branch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your B.Des Branch</h1>
+</header>
+
+<main>
+<div style="text-align:center; margin-bottom: 2rem;">
+  <input type="text" id="searchInput" placeholder="Search B.Des Branch..." onkeyup="filterBranches()"
+    style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 20px; border: 1px solid #3a6ea5; font-size: 1rem;" />
+</div>
+
+  <section aria-label="B.Des Branches" class="branch-grid">
+
+    <article class="branch-card">
+      <a href="branches/bdes/fashion-design.html" aria-label="Fashion Design branch">
+        <h2>Fashion Design</h2>
+        <p>Creative design and development of apparel and accessories.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bdes/interior-design.html" aria-label="Interior Design branch">
+        <h2>Interior Design</h2>
+        <p>Designing functional and aesthetic indoor spaces.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bdes/graphic-design.html" aria-label="Graphic Design branch">
+        <h2>Graphic Design</h2>
+        <p>Visual communication using typography, imagery, and colors.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bdes/industrial-product-design.html" aria-label="Industrial/Product Design branch">
+        <h2>Industrial/Product Design</h2>
+        <p>Designing user-friendly and innovative products.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bdes/communication-design.html" aria-label="Communication Design branch">
+        <h2>Communication Design</h2>
+        <p>Designing media to communicate ideas and messages effectively.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bdes/ux-ui-design.html" aria-label="UX/UI Design branch">
+        <h2>UX/UI Design</h2>
+        <p>User experience and interface design for digital products.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bdes/game-design.html" aria-label="Game Design branch">
+        <h2>Game Design</h2>
+        <p>Creating engaging game concepts and interactive experiences.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bdes/animation-multimedia.html" aria-label="Animation & Multimedia branch">
+        <h2>Animation & Multimedia</h2>
+        <p>Developing animated visuals and multimedia content.</p>
+      </a>
+    </article>
+
+  </section>
+</main>
+<script>
+  function filterBranches() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.branch-card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(filter) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choose Your B.Tech / B.E. Subjects - Clean Blue Theme</title>
+  <meta name="description" content="Explore semester wise unique B.Tech / B.E. subjects by branch. Search and select your subjects easily with modern UI and responsive design." />
+  <meta name="keywords" content="B.Tech subjects, Engineering subjects, Semester wise subjects, Engineering courses, Choose subjects, Engineering branches" />
+  <meta name="author" content="Your Name or Company" />
+  <style>
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #0a2342; /* Dark blue text */
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: #0a2342; /* Dark blue background */
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    .search-container {
+      max-width: 450px;
+      margin: 0 auto 2.5rem;
+      position: relative;
+    }
+
+    .search-container input[type="search"] {
+      width: 100%;
+      padding: 0.75rem 1.2rem;
+      font-size: 1.1rem;
+      border: 2px solid #0a2342;
+      border-radius: 30px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      outline: none;
+    }
+
+    .search-container input[type="search"]:focus {
+      border-color: #1867c0;
+      box-shadow: 0 0 10px rgba(24, 103, 192, 0.5);
+    }
+
+    /* Grid container for subject cards */
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.6rem;
+    }
+
+    /* Individual subject card */
+    .subject-card {
+      background-color: #ffffff;
+      border: 2px solid #d1d9e6;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 2px 6px rgba(10, 35, 66, 0.1);
+      cursor: default;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .subject-card:hover, .subject-card:focus-within {
+      background-color: #0a2342;
+      color: white;
+      border-color: #0a2342;
+      box-shadow: 0 6px 20px rgba(10, 35, 66, 0.4);
+      outline: none;
+    }
+
+    .subject-card h3 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      user-select: text;
+    }
+
+    /* Semester section title */
+    .semester-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 3rem 0 1.5rem;
+      border-bottom: 3px solid #0a2342;
+      padding-bottom: 0.3rem;
+      user-select: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .semester-title {
+        font-size: 1.3rem;
+      }
+      .subjects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your B.Tech / B.E. Subjects</h1>
+</header>
+
+<main>
+  <section aria-label="Search Subjects">
+    <div class="search-container">
+      <input 
+        type="search" 
+        id="subjectSearch" 
+        placeholder="Search subjects..." 
+        aria-describedby="searchHelp" 
+        aria-label="Search subjects"
+        autocomplete="off"
+      />
+      <small id="searchHelp" style="color:#555;">Type to filter subjects by name</small>
+    </div>
+  </section>
+
+  <!-- SEMESTER SECTIONS -->
+  <section aria-labelledby="sem1-title">
+    <h2 id="sem1-title" class="semester-title">1st Semester</h2>
+    <div class="subjects-grid">
+      <article class="subject-card" tabindex="0"><h3>Engineering Mathematics - I</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Engineering Physics</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Engineering Chemistry</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Basic Electrical Engineering</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Engineering Mechanics</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Engineering Graphics</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Communication Skills / English</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Environmental Science</h3></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sem2-title">
+    <h2 id="sem2-title" class="semester-title">2nd Semester</h2>
+    <div class="subjects-grid">
+      <article class="subject-card" tabindex="0"><h3>Engineering Mathematics - II</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Basic Electronics Engineering</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Human Anatomy and Physiology</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Data Structures and Programming (C / Python)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Network Theory and Signals</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Basic Mechanical Engineering</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Electronics Lab</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Programming Lab</h3></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sem3-title">
+    <h2 id="sem3-title" class="semester-title">3rd Semester</h2>
+    <div class="subjects-grid">
+      <article class="subject-card" tabindex="0"><h3>Engineering Mathematics - III</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Biomedical Instrumentation</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Analog Electronics</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Digital Electronics</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Biomaterials</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Sensors and Transducers</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Medical Imaging Systems</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Biomedical Instrumentation Lab</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Sensors and Transducers Lab</h3></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sem4-title">
+    <h2 id="sem4-title" class="semester-title">4th Semester</h2>
+    <div class="subjects-grid">
+      <article class="subject-card" tabindex="0"><h3>Engineering Mathematics - IV</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Biomedical Signal Processing</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Microprocessors</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Microcontrollers</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Rehabilitation Engineering</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Control Systems</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-I (Biosensors)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-I (Tissue Engineering)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Signal Processing Lab</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Microprocessor Lab</h3></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sem5-title">
+    <h2 id="sem5-title" class="semester-title">5th Semester</h2>
+    <div class="subjects-grid">
+      <article class="subject-card" tabindex="0"><h3>Medical Electronics</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Biomechanics</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-II (Clinical Engineering)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-II (Bioinformatics)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-III (Genetic Engineering)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-III (Nanotechnology)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-IV (Health Care Instrumentation)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Mini Project / Seminar</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Medical Electronics Lab</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Biomechanics Lab</h3></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sem6-title">
+    <h2 id="sem6-title" class="semester-title">6th Semester</h2>
+    <div class="subjects-grid">
+      <article class="subject-card" tabindex="0"><h3>Clinical Engineering and Healthcare Technology</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-V (Biomedical Imaging)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-V (Neural Engineering)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-VI (Biotechnology)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-VI (Physiological Modeling)</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-VII</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Minor Project / Seminar</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Clinical Engineering Lab</h3></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sem7-title">
+    <h2 id="sem7-title" class="semester-title">7th Semester</h2>
+    <div class="subjects-grid">
+      <article class="subject-card" tabindex="0"><h3>Elective-VIII</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-IX</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Major Project Phase - I</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Professional Ethics and Management</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Seminar / Technical Report</h3></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sem8-title">
+    <h2 id="sem8-title" class="semester-title">8th Semester</h2>
+    <div class="subjects-grid">
+      <article class="subject-card" tabindex="0"><h3>Major Project Phase - II</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Industrial Training / Internship Report</h3></article>
+      <article class="subject-card" tabindex="0"><h3>Elective-X (Optional)</h3></article>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Search filter script
+  const searchInput = document.getElementById('subjectSearch');
+  searchInput.addEventListener('input', () => {
+    const filter = searchInput.value.toLowerCase().trim();
+    const allCards = document.querySelectorAll('.subject-card');
+    let anyVisible = false;
+
+    allCards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (text.includes(filter)) {
+        card.style.display = '';
+        anyVisible = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Optional: if you want to hide semester titles when no subjects visible in that semester
+    document.querySelectorAll('section[aria-labelledby]').forEach(section => {
+      const visibleCards = section.querySelectorAll('.subject-card:not([style*="display: none"])');
+      section.style.display = visibleCards.length > 0 ? '' : 'none';
+    });
+  });
+</script>
+
+</body>
+</html>

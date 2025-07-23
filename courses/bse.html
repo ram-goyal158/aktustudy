@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore B.Sc. Nursing branches at AKTU Study: Medical-Surgical Nursing, Pediatric Nursing, Psychiatric Nursing, Community Health Nursing, Critical Care Nursing and more." />
+  <meta name="keywords" content="B.Sc Nursing, Nursing Specializations, Medical-Surgical Nursing, Pediatric Nursing, Psychiatric Nursing, Community Health Nursing, Critical Care Nursing, Gynaecology Nursing" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your B.Sc. Nursing Branch | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    article.branch-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #3a6ea5;
+    }
+    article.branch-card:hover,
+article.branch-card:focus-within {
+  background-color: #e0f0ff; /* Light blue */
+  box-shadow: 0 8px 28px rgba(10,35,66,0.3);
+  transform: translateY(-6px);
+}
+
+    article.branch-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: #0a2342;
+    }
+    article.branch-card p {
+      color: #234a78;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    article.branch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your B.Sc. Nursing Branch</h1>
+</header>
+
+<main>
+  <div style="text-align:center; margin-bottom: 2rem;">
+  <input type="text" id="searchInput" placeholder="Search B.Sc Branch..." onkeyup="filterBranches()"
+    style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 20px; border: 1px solid #3a6ea5; font-size: 1rem;" />
+</div>
+
+  <section aria-label="B.Sc. Nursing Branches" class="branch-grid">
+
+    <article class="branch-card">
+      <a href="branches/bsc/medical-surgical-nursing.html" aria-label="Medical-Surgical Nursing">
+        <h2>Medical-Surgical Nursing</h2>
+        <p>Foundational nursing care for adults in hospitals and clinical settings.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bsc/pediatric-nursing.html" aria-label="Pediatric Nursing">
+        <h2>Pediatric Nursing</h2>
+        <p>Care and treatment of infants, children, and adolescents.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bsc/obstetrics-gynaecology.html" aria-label="Obstetrics and Gynaecology">
+        <h2>Obstetrics & Gynaecology</h2>
+        <p>Specialized care for women during pregnancy, childbirth, and beyond.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bsc/psychiatric-nursing.html" aria-label="Psychiatric Nursing">
+        <h2>Psychiatric Nursing</h2>
+        <p>Mental health nursing for individuals with psychological disorders.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bsc/community-health-nursing.html" aria-label="Community Health Nursing">
+        <h2>Community Health Nursing</h2>
+        <p>Public health services and preventive care in community settings.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/bsc/critical-care-nursing.html" aria-label="Critical Care Nursing">
+        <h2>Critical Care Nursing</h2>
+        <p>Advanced nursing in ICUs for seriously ill and post-operative patients.</p>
+      </a>
+    </article>
+
+  </section>
+</main>
+<script>
+  function filterBranches() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.branch-card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(filter) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>

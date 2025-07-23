@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="B.Tech Chemical Engineering semester wise subjects list." />
+  <meta name="keywords" content="B.Tech Chemical Engineering subjects, Chemical Engineering syllabus, Process Calculations, Thermodynamics, Mass Transfer" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your Subject | B.Tech Chemical Engineering</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e3f2fd;
+      color: #0a2342;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #15395a);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
+      width: 100%;
+    }
+    .search-container {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+    .search-container input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 2px solid #0a2342;
+      transition: border-color 0.3s ease;
+    }
+    .search-container input:focus {
+      outline: none;
+      border-color: #15395a;
+      box-shadow: 0 0 8px #15395aaa;
+    }
+    .semester-section {
+      margin-bottom: 3rem;
+    }
+    .semester-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0a2342;
+      margin-bottom: 1rem;
+      border-left: 6px solid #0a2342;
+      padding-left: 12px;
+    }
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem;
+    }
+    .subject-card {
+      background: white;
+      border-radius: 14px;
+      padding: 1.4rem 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: default;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      border: 2px solid transparent;
+      user-select: none;
+      color: #0a2342;
+    }
+    .subject-card:hover,
+    .subject-card:focus-within {
+      background-color: #0a2342;
+      color: white;
+      box-shadow: 0 8px 28px rgba(10,35,66,0.4);
+      transform: translateY(-5px);
+      border-color: #15395a;
+      outline: none;
+    }
+    .subject-card p {
+      margin: 0;
+      font-size: 1rem;
+      text-decoration: none !important;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .semester-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your Subject | B.Tech Chemical Engineering</h1>
+</header>
+
+<main>
+  <div class="search-container" role="search" aria-label="Search subjects">
+    <input type="search" id="subjectSearch" placeholder="Search subjects..." aria-describedby="searchHelp" />
+    <small id="searchHelp" style="color:#0a2342; opacity:0.7;">Type to filter subjects</small>
+  </div>
+
+  <!-- Semester 1 -->
+  <section class="semester-section" aria-labelledby="sem1-title">
+    <h2 id="sem1-title" class="semester-title">1st Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Engineering Mathematics - I</article>
+      <article class="subject-card" tabindex="0">Engineering Physics</article>
+      <article class="subject-card" tabindex="0">Engineering Chemistry</article>
+      <article class="subject-card" tabindex="0">Basic Electrical Engineering</article>
+      <article class="subject-card" tabindex="0">Engineering Mechanics</article>
+      <article class="subject-card" tabindex="0">Engineering Graphics / Drawing</article>
+      <article class="subject-card" tabindex="0">Communication Skills / English</article>
+      <article class="subject-card" tabindex="0">Environmental Science</article>
+    </div>
+  </section>
+
+  <!-- Semester 2 -->
+  <section class="semester-section" aria-labelledby="sem2-title">
+    <h2 id="sem2-title" class="semester-title">2nd Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Engineering Mathematics - II</article>
+      <article class="subject-card" tabindex="0">Material Science</article>
+      <article class="subject-card" tabindex="0">Fluid Mechanics</article>
+      <article class="subject-card" tabindex="0">Thermodynamics - I</article>
+      <article class="subject-card" tabindex="0">Basic Chemical Engineering</article>
+      <article class="subject-card" tabindex="0">Data Structures and Programming (C / Python)</article>
+      <article class="subject-card" tabindex="0">Fluid Mechanics Lab</article>
+      <article class="subject-card" tabindex="0">Programming Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 3 -->
+  <section class="semester-section" aria-labelledby="sem3-title">
+    <h2 id="sem3-title" class="semester-title">3rd Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Engineering Mathematics - III</article>
+      <article class="subject-card" tabindex="0">Heat Transfer</article>
+      <article class="subject-card" tabindex="0">Mass Transfer - I</article>
+      <article class="subject-card" tabindex="0">Chemical Reaction Engineering - I</article>
+      <article class="subject-card" tabindex="0">Process Calculations and Thermodynamics</article>
+      <article class="subject-card" tabindex="0">Mechanical Operations</article>
+      <article class="subject-card" tabindex="0">Heat Transfer Lab</article>
+      <article class="subject-card" tabindex="0">Mechanical Operations Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 4 -->
+  <section class="semester-section" aria-labelledby="sem4-title">
+    <h2 id="sem4-title" class="semester-title">4th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Engineering Mathematics - IV</article>
+      <article class="subject-card" tabindex="0">Chemical Process Calculations</article>
+      <article class="subject-card" tabindex="0">Mass Transfer - II</article>
+      <article class="subject-card" tabindex="0">Chemical Reaction Engineering - II</article>
+      <article class="subject-card" tabindex="0">Instrumentation and Process Control</article>
+      <article class="subject-card" tabindex="0">Process Equipment Design</article>
+      <article class="subject-card" tabindex="0">Mass Transfer Lab</article>
+      <article class="subject-card" tabindex="0">Process Control Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 5 -->
+  <section class="semester-section" aria-labelledby="sem5-title">
+    <h2 id="sem5-title" class="semester-title">5th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Process Equipment Design - II</article>
+      <article class="subject-card" tabindex="0">Petroleum Refining and Petrochemical Engineering</article>
+      <article class="subject-card" tabindex="0">Plant Design and Safety</article>
+      <article class="subject-card" tabindex="0">Environmental Engineering</article>
+      <article class="subject-card" tabindex="0">Elective-I (Biochemical Engineering / Polymer Technology etc.)</article>
+      <article class="subject-card" tabindex="0">Elective-II</article>
+      <article class="subject-card" tabindex="0">Plant Design Lab</article>
+      <article class="subject-card" tabindex="0">Environmental Engineering Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 6 -->
+  <section class="semester-section" aria-labelledby="sem6-title">
+    <h2 id="sem6-title" class="semester-title">6th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Process Dynamics and Control</article>
+      <article class="subject-card" tabindex="0">Project Engineering and Management</article>
+      <article class="subject-card" tabindex="0">Elective-III (Advanced Reaction Engineering / Energy Engineering)</article>
+      <article class="subject-card" tabindex="0">Elective-IV (Process Modelling / Nanotechnology etc.)</article>
+      <article class="subject-card" tabindex="0">Minor Project / Seminar</article>
+      <article class="subject-card" tabindex="0">Process Control Lab</article>
+      <article class="subject-card" tabindex="0">Process Modelling Lab</article>
+    </div>
+  </section>
+
+  <!-- Semester 7 -->
+  <section class="semester-section" aria-labelledby="sem7-title">
+    <h2 id="sem7-title" class="semester-title">7th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Elective-V (Catalysis / Advanced Separation Processes)</article>
+      <article class="subject-card" tabindex="0">Elective-VI</article>
+      <article class="subject-card" tabindex="0">Major Project Phase - I</article>
+      <article class="subject-card" tabindex="0">Professional Ethics and Management</article>
+      <article class="subject-card" tabindex="0">Seminar / Technical Report</article>
+    </div>
+  </section>
+
+  <!-- Semester 8 -->
+  <section class="semester-section" aria-labelledby="sem8-title">
+    <h2 id="sem8-title" class="semester-title">8th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">Major Project Phase - II</article>
+      <article class="subject-card" tabindex="0">Industrial Training / Internship Report</article>
+      <article class="subject-card" tabindex="0">Elective-VII (Optional)</article>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const searchInput = document.getElementById('subjectSearch');
+  const subjectCards = document.querySelectorAll('.subject-card');
+
+  searchInput.addEventListener('input', () => {
+    const filter = searchInput.value.toLowerCase().trim();
+    subjectCards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+
+</body>
+</html>

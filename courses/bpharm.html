@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore B.Pharm branches at AKTU Study: General Pharmacy, Pharmaceutical Chemistry, Pharmaceutics, Pharmacology, Pharmacognosy." />
+  <meta name="keywords" content="B.Pharm branches, Bachelor of Pharmacy, General Pharmacy, Pharmaceutical Chemistry, Pharmaceutics, Pharmacology, Pharmacognosy" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your B.Pharm Branch | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    article.branch-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+    }
+    article.branch-card:hover,
+    article.branch-card:focus-within {
+      box-shadow: 0 8px 28px rgba(10,35,66,0.3);
+      transform: translateY(-6px);
+      border-color: #0a2342;
+      outline: none;
+    }
+    article.branch-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: #0a2342;
+    }
+    article.branch-card p {
+      color: #234a78;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    article.branch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      outline-offset: 4px;
+    }
+    article.branch-card a:focus,
+    article.branch-card a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your B.Pharm Subjects</h1>
+</header>
+
+<main>
+  <div style="text-align:center; margin-bottom: 2rem;">
+  <input type="text" id="searchInput" placeholder="Search B.Pharm Subject..." onkeyup="filterBranches()"
+    style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 20px; border: 1px solid #3a6ea5; font-size: 1rem;" />
+</div>
+  <section aria-label="B.Pharm Branches" class="branch-grid">
+
+    <article class="branch-card" tabindex="0">
+      <a href="general-pharmacy.html" aria-label="General Pharmacy branch">
+        <h2>General Pharmacy</h2>
+        <p>Fundamentals of pharmacy practice and community pharmacy management.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="pharmaceutical-chemistry.html" aria-label="Pharmaceutical Chemistry branch">
+        <h2>Pharmaceutical Chemistry</h2>
+        <p>Study of chemical properties of drugs and their design.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="pharmaceutics.html" aria-label="Pharmaceutics branch">
+        <h2>Pharmaceutics</h2>
+        <p>Formulation, development, and manufacturing of medicines.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="pharmacology.html" aria-label="Pharmacology branch">
+        <h2>Pharmacology</h2>
+        <p>Study of drug actions and interactions within the body.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="pharmacognosy.html" aria-label="Pharmacognosy branch">
+        <h2>Pharmacognosy</h2>
+        <p>Study of medicinal plants and natural products.</p>
+      </a>
+    </article>
+
+  </section>
+</main>
+<!-- 🔧 JS for live search -->
+<script>
+  function filterBranches() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.branch-card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(filter) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>

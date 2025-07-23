@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore MCA branches at AKTU Study: Computer Applications, Software Engineering, Data Science, AI/ML, Cloud Security, Full Stack Development and more." />
+  <meta name="keywords" content="MCA, Master of Computer Applications, Data Science, Software Engineering, AI ML, Cloud Security, Full Stack Development, Computer Applications" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your MCA Branch | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    article.branch-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #3a6ea5;
+    }
+    article.branch-card:hover,
+article.branch-card:focus-within {
+  background-color: #e0f0ff; /* Light blue */
+  box-shadow: 0 8px 28px rgba(10,35,66,0.3);
+  transform: translateY(-6px);
+}
+
+    article.branch-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: #0a2342;
+    }
+    article.branch-card p {
+      color: #234a78;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    article.branch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your MCA Branch</h1>
+</header>
+
+<main>
+  <div style="text-align:center; margin-bottom: 2rem;">
+  <input type="text" id="searchInput" placeholder="Search MCA Branch..." onkeyup="filterBranches()"
+    style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 20px; border: 1px solid #3a6ea5; font-size: 1rem;" />
+</div>
+
+  <section aria-label="MCA Branches" class="branch-grid">
+
+    <article class="branch-card">
+      <a href="branches/mca/general-computer-applications.html" aria-label="General Computer Applications">
+        <h2>General Computer Applications</h2>
+        <p>Core concepts in programming, software tools, and system operations.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mca/software-engineering.html" aria-label="Software Engineering">
+        <h2>Software Engineering</h2>
+        <p>Learn software development lifecycle, testing, and project planning.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mca/data-science.html" aria-label="Data Science">
+        <h2>Data Science</h2>
+        <p>Statistics, data visualization, machine learning, and analytics tools.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mca/ai-ml.html" aria-label="Artificial Intelligence and Machine Learning">
+        <h2>AI / ML</h2>
+        <p>Build smart systems using deep learning, NLP, and AI models.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mca/cloud-security.html" aria-label="Cloud and Network Security">
+        <h2>Cloud & Network Security</h2>
+        <p>Secure systems on cloud platforms and manage modern cyber threats.</p>
+      </a>
+    </article>
+
+    <article class="branch-card">
+      <a href="branches/mca/full-stack-development.html" aria-label="Full Stack Development">
+        <h2>Full Stack Development</h2>
+        <p>Front-end and back-end web development using modern stacks.</p>
+      </a>
+    </article>
+
+  </section>
+</main>
+<script>
+  function filterBranches() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.branch-card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(filter) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
