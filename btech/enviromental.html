@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete semester-wise subjects list for B.Tech Environmental Engineering. Explore all subjects from 1st to 8th semester with search functionality." />
+  <meta name="keywords" content="B.Tech Environmental Engineering subjects, Environmental Engineering syllabus, semester-wise subjects, engineering curriculum, environmental studies" />
+  <meta name="author" content="AKTU Study" />
+  <title>B.Tech Environmental Engineering Subjects | Semester-wise Curriculum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #0a2342;
+      --secondary-color: #2ca58d;
+      --accent-color: #3a6ea5;
+      --light-color: #f7f9fc;
+      --dark-color: #0a2342;
+      --hover-color: #1d7a8c;
+      --card-bg: #ffffff;
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f7f4;
+      color: var(--dark-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(10, 35, 66, 0.3);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h30v30H0V0zm30 30h30v30H30V30z' fill='%231d7a8c' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      z-index: -1;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      animation: fadeInDown 0.8s ease-out;
+    }
+    
+    .subtitle {
+      font-weight: 300;
+      margin-top: 0.5rem;
+      opacity: 0.9;
+      animation: fadeIn 1s ease-out 0.3s both;
+    }
+    
+    main {
+      flex: 1;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+      width: 100%;
+    }
+    
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      position: relative;
+      animation: slideUp 0.8s ease-out;
+    }
+    
+    .search-container input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      border: none;
+      box-shadow: 0 5px 20px rgba(10, 35, 66, 0.1);
+      transition: var(--transition);
+      background-color: var(--card-bg);
+      color: var(--dark-color);
+    }
+    
+    .search-container input:focus {
+      outline: none;
+      box-shadow: 0 8px 25px rgba(10, 35, 66, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .search-container input::placeholder {
+      color: #aaa;
+    }
+    
+    .search-icon {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent-color);
+    }
+    
+    .semester-section {
+      margin-bottom: 3.5rem;
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .semester-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--secondary-color);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .semester-title::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background-color: var(--hover-color);
+      transition: width 0.4s ease;
+    }
+    
+    .semester-title:hover::after {
+      width: 100%;
+    }
+    
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.8rem;
+    }
+    
+    .subject-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.6rem;
+      box-shadow: 0 8px 25px rgba(10, 35, 66, 0.08);
+      cursor: pointer;
+      transition: var(--transition);
+      border: 1px solid rgba(10, 35, 66, 0.1);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .subject-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--hover-color), var(--secondary-color));
+      z-index: -1;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .subject-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(10, 35, 66, 0.15);
+      color: white;
+    }
+    
+    .subject-card:hover::before {
+      opacity: 1;
+    }
+    
+    .subject-card:hover .subject-name {
+      color: white;
+    }
+    
+    .subject-name {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin: 0;
+      transition: var(--transition);
+      position: relative;
+    }
+    
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.2rem;
+      color: #666;
+      display: none;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .semester-title {
+        font-size: 1.5rem;
+      }
+      
+      .subject-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 2rem 1rem;
+      }
+      
+      header h1 {
+        font-size: 1.5rem;
+      }
+      
+      .search-container {
+        margin-bottom: 2rem;
+      }
+      
+      .subject-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>B.Tech Environmental Engineering</h1>
+  <p class="subtitle">Choose Your Subject - Semester Wise Curriculum</p>
+</header>
+
+<main>
+  <div class="search-container" role="search" aria-label="Search subjects">
+    <input type="search" id="subjectSearch" placeholder="Search subjects..." aria-describedby="searchHelp" />
+    <span class="search-icon">🔍</span>
+    <small id="searchHelp" style="display: block; margin-top: 0.5rem; color: var(--dark-color); opacity: 0.7;">Type to filter subjects across all semesters</small>
+  </div>
+
+  <!-- Semester 1 -->
+  <section class="semester-section" data-semester="1" aria-labelledby="sem1-title">
+    <h2 id="sem1-title" class="semester-title">1st Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Mathematics – I</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Physics</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Chemistry</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Basic Electrical Engineering</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Mechanics</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Communication Skills / English</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Science</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Graphics / Workshop</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Semester 2 -->
+  <section class="semester-section" data-semester="2" aria-labelledby="sem2-title">
+    <h2 id="sem2-title" class="semester-title">2nd Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Mathematics – II</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Basic Civil Engineering</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Computer Programming (C / Python)</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Fluid Mechanics</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Geology</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Surveying</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Fluid Mechanics Lab</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Surveying Lab</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Semester 3 -->
+  <section class="semester-section" data-semester="3" aria-labelledby="sem3-title">
+    <h2 id="sem3-title" class="semester-title">3rd Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Mathematics – III</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Chemistry & Microbiology</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Water Supply Engineering</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Solid Waste Management</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Hydraulics</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Engineering Lab – I</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Water Supply Lab</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Semester 4 -->
+  <section class="semester-section" data-semester="4" aria-labelledby="sem4-title">
+    <h2 id="sem4-title" class="semester-title">4th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Engineering Mathematics – IV</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Wastewater Engineering</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Air Pollution and Control</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Geotechnology</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Municipal Solid Waste Management</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Wastewater Engineering Lab</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Air Pollution Lab</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Semester 5 -->
+  <section class="semester-section" data-semester="5" aria-labelledby="sem5-title">
+    <h2 id="sem5-title" class="semester-title">5th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Industrial Waste Management</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Remote Sensing & GIS Applications in Environment</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Hazardous Waste Management</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Impact Assessment (EIA)</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Instrumentation & Control</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Remote Sensing & GIS Lab</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Instrumentation Lab</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Semester 6 -->
+  <section class="semester-section" data-semester="6" aria-labelledby="sem6-title">
+    <h2 id="sem6-title" class="semester-title">6th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Climate Change and Sustainable Development</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Green Technology</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Modelling & Simulation</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Elective-I (Energy from Waste / Environmental Law etc.)</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Elective-II (Hydrology / Groundwater Engineering etc.)</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Environmental Simulation Lab</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Minor Project / Seminar</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Semester 7 -->
+  <section class="semester-section" data-semester="7" aria-labelledby="sem7-title">
+    <h2 id="sem7-title" class="semester-title">7th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Elective-III (Biosensors / Environmental Risk Analysis etc.)</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Elective-IV</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Major Project – Phase I</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Project Management and Entrepreneurship</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Seminar / Technical Writing</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Semester 8 -->
+  <section class="semester-section" data-semester="8" aria-labelledby="sem8-title">
+    <h2 id="sem8-title" class="semester-title">8th Semester</h2>
+    <div class="subject-grid">
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Major Project – Phase II</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Internship / Industrial Training Report</p>
+      </article>
+      <article class="subject-card" tabindex="0">
+        <p class="subject-name">Elective-V (Optional)</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="no-results" id="noResults">
+    No subjects found matching your search. Try different keywords.
+  </div>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('subjectSearch');
+    const subjectCards = document.querySelectorAll('.subject-card');
+    const noResults = document.getElementById('noResults');
+    const semesterSections = document.querySelectorAll('.semester-section');
+    
+    // Initialize no results message as hidden
+    noResults.style.display = 'none';
+    
+    searchInput.addEventListener('input', function() {
+      const filter = this.value.toLowerCase().trim();
+      let anyResults = false;
+      
+      // First hide all semester sections
+      semesterSections.forEach(section => {
+        section.style.display = 'none';
+      });
+      
+      if (filter === '') {
+        // If search is empty, show all sections and cards
+        semesterSections.forEach(section => {
+          section.style.display = '';
+        });
+        subjectCards.forEach(card => {
+          card.style.display = '';
+        });
+        noResults.style.display = 'none';
+        return;
+      }
+      
+      // Search through all cards
+      subjectCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          card.style.display = '';
+          // Show the parent semester section
+          card.closest('.semester-section').style.display = '';
+          anyResults = true;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // Show no results message if no matches found
+      if (!anyResults) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    });
+    
+    // Add animation to cards when they come into view
+    const observerOptions = {
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    subjectCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  });
+</script>
+
+</body>
+</html>

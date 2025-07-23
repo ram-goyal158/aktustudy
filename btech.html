@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore B.Tech / B.E. branches at AKTU Study: Computer Science, IT, ECE, EE, ME, Civil, Chemical, Biomedical, Environmental, and more." />
+  <meta name="keywords" content="B.Tech branches, Bachelor of Engineering, Computer Science Engineering, IT, Electronics, Mechanical, Civil Engineering, Chemical Engineering, Biomedical Engineering, Data Science, IoT, Robotics" />
+  <meta name="author" content="AKTU Study" />
+  <title>Choose Your B.Tech Branch | AKTU Study</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      color: #0a2342;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0a2342, #3a6ea5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 15px rgba(10,35,66,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    article.branch-card {
+      background-color: white;
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(10,35,66,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+    }
+    article.branch-card:hover,
+article.branch-card:focus-within {
+  background-color: #e0f0ff; /* Light blue */
+  box-shadow: 0 8px 28px rgba(10,35,66,0.3);
+  transform: translateY(-6px);
+}
+
+    article.branch-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: #0a2342;
+    }
+    article.branch-card p {
+      color: #234a78;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    article.branch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      outline-offset: 4px;
+    }
+    article.branch-card a:focus,
+    article.branch-card a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Choose Your B.Tech / B.E. Branch</h1>
+</header>
+
+<main>
+<div style="text-align:center; margin-bottom: 2rem;">
+  <input type="text" id="searchInput" placeholder="Search B.Tech Branch..." onkeyup="filterBranches()"
+    style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 20px; border: 1px solid #3a6ea5; font-size: 1rem;" />
+</div>
+
+
+
+  <section aria-label="B.Tech Branches" class="branch-grid">
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches\btech\cse.html" aria-label="Computer Science Engineering branch">
+        <h2>Computer Science Engineering (CSE)</h2>
+        <p>Focus on software, algorithms, and computing technologies.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches\btech\it.html" aria-label="Information Technology branch">
+        <h2>Information Technology (IT)</h2>
+        <p>Study of computer systems, networks, and information management.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/ece.html" aria-label="Electronics & Communication Engineering branch">
+        <h2>Electronics & Communication Engineering (ECE)</h2>
+        <p>Design and development of electronic devices and communication systems.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/ee.html" aria-label="Electrical Engineering branch">
+        <h2>Electrical Engineering (EE)</h2>
+        <p>Study of electrical systems, power generation, and electronics.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/me.html" aria-label="Mechanical Engineering branch">
+        <h2>Mechanical Engineering (ME)</h2>
+        <p>Focus on mechanics, thermodynamics, and machine design.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/ce.html" aria-label="Civil Engineering branch">
+        <h2>Civil Engineering (CE)</h2>
+        <p>Planning, designing, and construction of infrastructure projects.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/chemical.html" aria-label="Chemical Engineering branch">
+        <h2>Chemical Engineering</h2>
+        <p>Process engineering, chemical production, and materials science.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/biomedical.html" aria-label="Biomedical Engineering branch">
+        <h2>Biomedical Engineering</h2>
+        <p>Application of engineering principles to healthcare and medical devices.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/enviromental.html" aria-label="Environmental Engineering branch">
+        <h2>Environmental Engineering</h2>
+        <p>Focus on protecting environment through engineering solutions.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/mechatronics.html" aria-label="Mechatronics Engineering branch">
+        <h2>Mechatronics Engineering</h2>
+        <p>Integration of mechanical, electronics, and computing technology.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/agricultural.html" aria-label="Agricultural Engineering branch">
+        <h2>Agricultural Engineering</h2>
+        <p>Engineering principles applied to agriculture and farming.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/data.html" aria-label="Data Science & AI branch">
+        <h2>Data Science & AI</h2>
+        <p>Data analysis, machine learning, and artificial intelligence.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/iot.html" aria-label="Internet of Things branch">
+        <h2>Internet of Things (IoT)</h2>
+        <p>Connecting devices and systems for smarter environments.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/electronics.html" aria-label="Electronics & Instrumentation branch">
+        <h2>Electronics & Instrumentation</h2>
+        <p>Design and control of instruments and electronic devices.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/robotics.html" aria-label="Robotics & Automation branch">
+        <h2>Robotics & Automation</h2>
+        <p>Design and development of robots and automated systems.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/aerospace.html" aria-label="Aerospace Engineering branch">
+        <h2>Aerospace Engineering</h2>
+        <p>Study of aircraft, spacecraft, and related technologies.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/petroleum.html" aria-label="Petroleum Engineering branch">
+        <h2>Petroleum Engineering</h2>
+        <p>Exploration and extraction of oil and gas resources.</p>
+      </a>
+    </article>
+
+    <article class="branch-card" tabindex="0">
+      <a href="branches/btech/mining.html" aria-label="Mining Engineering branch">
+        <h2>Mining Engineering</h2>
+        <p>Extraction of minerals and management of mining operations.</p>
+      </a>
+    </article>
+
+  </section>
+</main>
+<script>
+  function filterBranches() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.branch-card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(filter) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
